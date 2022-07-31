@@ -1,0 +1,26 @@
+<mat-card-content>
+    <form (ngSubmit)="addProject()" [formGroup]="myForm" novalidate fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+       <mat-form-field>
+         <mat-label>Nombre del Proyecto</mat-label>
+         <input matInput placeholder="" formControlName="proy_nombre" id="proy_nombre" required>
+         <mat-error *ngIf="myError('proy_nombre', 'required')">El dato requerido</mat-error>
+         <mat-error *ngIf="myError('proy_nombre', 'maxlength')">Demasiado largo</mat-error>
+       </mat-form-field>
+        <mat-form-field>
+           <mat-label>Descripción</mat-label>
+           <textarea matInput placeholder="" formControlName="proy_descripcion" id="proy_descripcion" required></textarea>
+           <mat-error *ngIf="myError('proy_descripcion', 'required')">El dato requerido</mat-error>
+           <mat-error *ngIf="myError('proy_descripcion', 'maxlength')">Demasiado largo</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+             <mat-label>URL Logo</mat-label>
+             <input matInput placeholder="" formControlName="proy_urlimg" id="proy_urlimg" required>
+             <mat-error *ngIf="myError('proy_urlimg', 'required')">El dato requerido</mat-error>
+             <mat-error *ngIf="myError('proy_urlimg', 'maxlength')">Demasiado largo</mat-error>
+         </mat-form-field>
+       <mat-card-actions>
+         <button  mat-raised-button color="primary" [disabled]="!myForm.valid">Agregar</button>
+         <button  mat-raised-button color="primary"[mat-dialog-close]="myForm"> Cancelar</button>
+       </mat-card-actions>
+     </form>
+ </mat-card-content>

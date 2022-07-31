@@ -1,0 +1,13 @@
+<div class="container">
+    <header>
+     <nav class="fixed-top navbar navbar-light bg-black">
+      <a style="color: aliceblue;margin-left: 2%;" class="navbar-brand" href="#">Dario Loza</a>
+       <ul class="nav justify-content-end" style="margin-right: 5%;">
+       <li class="nav-item"><a href="https://api.whatsapp.com/send?phone=5493425310757" style="color: aliceblue;" class="nav-link active" ><i class="fab fa-whatsapp"></i></a></li>
+       <li class="nav-item"><a href="https://t.me/DarioLoza" style="color: aliceblue;" class="nav-link active" > <i class="fab fa-telegram"></i></a></li>
+       <button (click)="login()" *ngIf="!isLogged" style="color: aliceblue;" class="nav-link btn buttonMin">Login</button>
+       <button (click)="onLogOut()" *ngIf="isLogged" style="color: aliceblue;" class="nav-link btn buttonMin">LogOut</button>
+       </ul>
+     </nav>
+  </header>
+ </div>

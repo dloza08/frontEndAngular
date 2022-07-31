@@ -1,0 +1,22 @@
+
+<div style = "margin-top:5%;">
+   <div class="card mb-3 borde-card" Style="max-width:100%; padding: 5px 7px;" *ngFor="let profile of arrayProfile">
+      <div style="width: 100%;">
+      <img src= {{profile.hd_urlperfil}} class="img-fluid rounded-start card-img-top perfil" alt="Perfil" id="fotoperfil"> 
+      <a class="btn btn-pen-perfil btn-rigth"  (click)="editarImgprofile(profile.id)" id ="penrespon"><i class="fas fa-pen" *ngIf="isLogged"></i></a>
+    </div>
+    <div style="width: 100%;">
+      <img src= {{profile.hd_urlbanner}}  class="img-fluid card-img-top" height="148px" width="1001px" alt="Banner">
+      <a class="btn btn-banner btn-rigth"(click)="editarBanner(profile.id)"><i class="fas fa-pen" *ngIf="isLogged"></i></a>
+    </div> 
+        <div class="card-body">
+         <div style="display: flex; flex-flow: row-reverse;margin-top:1px; padding:1px 1px;">
+            <a class="btn btn-rigth" (click)="editarProfile(profile.id)"> <i class="fas fa-pen" *ngIf="isLogged" ></i></a>
+         </div>
+         <br>
+         <h5 class="card-title">{{profile.hd_ocupacion}} - {{profile.hd_email}}</h5>
+         <h6 class="Acerca">Acerca de</h6>
+         <p class="card-text">{{profile.hd_acerca}}</p>
+       </div>
+    </div>
+  </div>

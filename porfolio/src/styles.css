@@ -1,0 +1,149 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+.bodyP {
+    background-color:#F8F5F5;
+    font-family: Open Sans, sans-serif;
+    display: flex;
+    justify-content: center;
+    font-family: Open Sans, sans-serif;
+    
+}
+p {
+    font-size: 15px;
+    font-style: normal;
+}
+h3 {
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #000000;
+}   
+
+.borde-card{
+    border-color:#A9E3FA;
+    border-radius:10px;
+
+}
+h5 {
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    line-height: 30px;
+    color: #000000;
+    padding:10px;
+}   
+.h5-Card {
+    margin-left:5px;
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    line-height: 30px;
+    color: #000000;
+    padding:10px;
+}   
+.columna{
+    width:25%;
+    padding:20px;
+    margin:10px;
+}
+
+
+
+nav{
+    background:#F8F5F5;
+    padding:20px;
+
+}
+.nav-padre{
+    display:flex;
+    justify-content:flex-end;
+} 
+.padre{
+    display:flex;
+}
+
+.contenedor { 
+    width:100%;
+    padding: 15px;
+
+}
+.formulario {
+    background:#FFFFFF;
+    margin-top:150px;
+    padding:3px;
+    border: 2px solid #A9E3FA;
+}
+
+.input-contenedor{
+    margin-bottom: 15px;
+    border: none;
+
+}
+
+.button{
+    width:20%;
+    height: 40px;
+    background: #00A6E5;
+    border: 1px solid #00A6E5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 5px;
+    color: #FFFFFF;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    text-justify: center;
+    cursor: pointer;
+    margin-left:180px;
+}
+.buttonMin{
+    width:60px;
+    height: 27px;
+    background: #00A6E5;
+    border: 1px solid #00A6E5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 5px; 
+    color: #FFFFFF;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 12px;
+    text-align: center;
+    text-justify: center;
+    cursor: pointer;
+    margin-top: 7px;
+    margin-left:20px;
+}
+
+.logo{
+    width: 15%;
+    height: 40px;
+    padding:3px;
+    margin-top:10px ;
+    margin-left:200px;
+
+}
+.logoMin{
+    width: 5%;
+    height: 50px;
+    padding:3px;
+    margin-top:10px ;
+    margin-left:140px;
+
+}
+
+
+@media (min-width:768px)
+{
+  .formulario{
+      margin:auto;
+      width: 500px;
+      margin-top: 150px;
+      border-radius: 2%;
+  }
+
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

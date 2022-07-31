@@ -1,0 +1,28 @@
+<mat-card-content>
+  <h3 style="text-align:center">Login</h3>
+  <br>
+  <form (ngSubmit)="onLogin()" [formGroup]="myForm"   novalidate fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <mat-form-field>
+     <mat-label for="nombreUsuario">Username</mat-label>
+     <!-- <input type="email" placeholder="Nombre Usuario" id="nombreUsuario" [(ngModel)]="nombreUsuario" required />-->
+     <input type="text" placeholder="Nombre Usuario" matInput formControlName="nombreUsuario" id="nombreUsuario" [(ngModel)]="nombreUsuario" required />
+      <!-- <mat-error *ngIf= "nombreUsuario?.errMsjors && nombreUsuario?.touched"></mat-error>-->
+      <!-- <mat-error *ngIf= "Email?.hasError('required')">El dato requerido</mat-error>-->
+      <!-- <mat-error *ngIf= "nombreUsuario?.errMsj('required')">El dato requerido</mat-error>-->
+     <!-- <mat-error *ngIf= "nombreUsuario?.hasError('nombreUsuario')">El formato de email debe ser válido</mat-error>-->
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label for ="password">Password</mat-label>
+      <!-- <input type="password" placeholder="password" id="password" [(ngModel)]="password" required />-->
+      <input type="password" placeholder="password" matInput formControlName="password" id="password" [(ngModel)]="password" required />
+      <!--<mat-error *ngIf= "password?.errors && Password?.touched"></mat-error>-->
+      <!-- <mat-error *ngIf= "password?.hasError('required')">El dato requerido</mat-error>-->
+      <!-- <mat-error *ngIf= "password?.hasError('minlength')">El password mínimo debe contener 8 o más caracteres</mat-error>-->
+     </mat-form-field>
+     <mat-card-actions>
+      <!-- <button  mat-raised-button color="primary" type = "submit" [disabled]="!myForm.valid">Ingresar</button>-->
+      <button  mat-raised-button color="primary" type = "submit">Ingresar</button>
+      <button  mat-raised-button color="primary" [mat-dialog-close]="myForm">Cancelar</button>
+     </mat-card-actions>
+    </form>
+</mat-card-content>

@@ -1,0 +1,35 @@
+<div style="margin-top: 5px; margin-left: 5px;">
+    <div class="card mb-3 borde-card" style="max-width:100%;padding:5px 7px">
+      <div class="row g-0">
+        <div class="col-md-2">
+          <div><h5 class="card-title">Educación</h5></div>
+        </div>
+      <div class="col-md-8"></div>
+      <div class="col-md-2"> 
+        <div style="display: flex ; flex-flow: row-reverse; margin-top:1px; padding:1px 1px;"> 
+        <div (click)="addEducation()"><a class="btn btn-right" *ngIf="isLogged"><i class="fas fa-plus"></i></a></div>
+      </div>
+     </div>
+      <div class="row g-0" *ngFor="let educacion of arrayEducation">
+      <div class="col-md-2">
+       <img src={{educacion.ed_urllogo}} style="margin-left:20px; margin-top:1px; padding:15px 1px;" class="img-fluid rounded-start" height="75px" width="75px"alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body"> 
+            <li>{{educacion.ed_titulo}} <!--{{educacion.ed_final}}  {{educacion.ed_comienzo}}--></li>
+            <p class="card-text">{{educacion.ed_descripcion}}</p>
+            <p class="card-text">{{educacion.ed_institucion}}</p>
+            <p class="card-text">{{educacion.ed_tipo}}</p>
+         </div>
+      </div> 
+     <div class="col-md-2">
+      <div style="display: flex; flex-flow: row-reverse;margin-top:1px; padding:1px 1px">
+        
+        <div><a class="btn btn-right" (click)="eliminarEducation(educacion.id)" *ngIf="isLogged"><i class="fas fa-trash"></i> </a></div>
+       <div><a class="btn-edit btn btn-rigth" (click)="editarEducation(educacion.id)" *ngIf="isLogged"> <i class="fas fa-pen"></i></a></div>
+      </div>
+    </div>
+   </div>
+  </div>
+</div>
+     

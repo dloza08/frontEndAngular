@@ -1,0 +1,48 @@
+<mat-card-content>
+   <form (ngSubmit)="addExperiencia()" [formGroup]="myForm" novalidate fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <mat-form-field>
+        <mat-label>Puesto</mat-label>
+        <input matInput placeholder="" formControlName="exp_puesto" id="exp_puesto" required>
+        <mat-error *ngIf="myError('exp_puesto', 'required')">El dato requerido</mat-error>
+        <mat-error *ngIf="myError('exp_puesto', 'maxlength')">Demasiado largo</mat-error>
+      </mat-form-field>
+       <mat-form-field>
+          <mat-label>Descripción</mat-label>
+          <textarea matInput placeholder="" formControlName="exp_descripcion" id="exp_descripcion" required></textarea>
+          <mat-error *ngIf="myError('exp_descripcion', 'required')">El dato requerido</mat-error>
+          <mat-error *ngIf="myError('exp_descripcion', 'maxlength')">Demasiado largo</mat-error>
+       </mat-form-field>
+       <mat-form-field>
+           <mat-label>Sitio</mat-label>
+            <input matInput placeholder="" formControlName="exp_sitio" id="exp_sitio" required>
+            <mat-error *ngIf="myError('exp_sitio', 'required')">El dato requerido</mat-error>
+            <mat-error *ngIf="myError('exp_sitio', 'maxlength')">Demasiado largo</mat-error>
+        </mat-form-field>
+       <mat-form-field>
+            <mat-label>URL Logo</mat-label>
+            <input matInput placeholder="" formControlName="exp_urllogo" id="exp_urllogo" required>
+            <mat-error *ngIf="myError('exp_urllogo', 'required')">El dato requerido</mat-error>
+            <mat-error *ngIf="myError('exp_urllogo', 'maxlength')">Demasiado largo</mat-error>
+        </mat-form-field>
+       <!--<mat-form-field>
+            <mat-label>Fecha de Inicio</mat-label>
+            <input matInput [matDatepicker]="exp_comienzo" placeholder="" formControlName="exp_comienzo" id="exp_comienzo" required>
+            <mat-hint>DD/MM/AAAA</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]= "exp_comienzo"></mat-datepicker-toggle>
+            <mat-datepicker-toggle matSuffix [for]= "exp_comienzo"></mat-datepicker-toggle>
+            <mat-datepicker #exp_comienzo></mat-datepicker>
+            <mat-error *ngIf="myError('exp_comienzo', 'required')">El dato requerido</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Fecha de Finalización</mat-label>
+            <input matInput [matDatepicker]="picker2" placeholder="" formControlName="exp_final" id="exp_final">
+            <mat-hint>DD/MM/AAAA</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>-->
+       <mat-card-actions>
+        <button  mat-raised-button color="primary" [disabled]="!myForm.valid">Agregar</button>
+        <button  mat-raised-button color="primary"[mat-dialog-close]="myForm"> Cancelar</button>
+      </mat-card-actions>
+    </form>
+</mat-card-content>

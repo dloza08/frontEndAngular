@@ -1,0 +1,25 @@
+mat-card{
+    max-width: 120px;
+    
+}
+mat-card-header {
+        justify-content: center;
+}
+    
+mat-form-field {
+        width: 90%;
+        
+}
+.id {
+  display: none !important;
+}
+mat-card-actions {
+    display:flex;
+    text-align: center;
+}
+.check {
+    max-width: 600px;
+}
+.margin {
+       margin: 0 12px;
+}

@@ -1,0 +1,14 @@
+<mat-card-content>
+    <form (ngSubmit)="editarBan()"[formGroup]="myForm" novalidate fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <mat-form-field>
+        <mat-label>URL Imagen de Banner</mat-label>
+        <input matInput placeholder="" formControlName="hd_urlbanner" id="hd_urlbanner" required>
+         <mat-error *ngIf="myError('hd_urlbanner', 'required')">El dato requerido</mat-error>
+         <mat-error *ngIf="myError('hd_urlbanner', 'maxlength')">Demasiado largo</mat-error>
+       </mat-form-field>
+        <mat-card-actions>
+         <button  mat-raised-button color="primary" [disabled]="!myForm.valid">Actualizar</button>
+         <button  mat-raised-button color="primary" [mat-dialog-close]="myForm"> Cancelar</button>
+       </mat-card-actions>
+    </form>
+</mat-card-content>

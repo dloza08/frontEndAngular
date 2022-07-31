@@ -1,0 +1,26 @@
+<mat-card-content>
+    <form  (ngSubmit)="editarProfile()"[formGroup]="myForm" novalidate fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+         <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="" formControlName="hd_email" id="hd_email" required>
+            <mat-error *ngIf="myError('hd_email', 'required')">El dato requerido</mat-error>
+            <mat-error *ngIf="myError('hd_email', 'maxlength')">Demasiado largo</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+         <mat-label>Ocupación</mat-label>
+            <input matInput placeholder="" formControlName="hd_ocupacion" id="hd_ocupacion" required>
+            <mat-error *ngIf="myError('hd_ocupacion', 'required')">El dato requerido</mat-error>
+            <mat-error *ngIf="myError('hd_ocupacion', 'maxlength')">Demasiado largo</mat-error>
+          </mat-form-field>
+            <mat-form-field>
+              <mat-label>Acerca de</mat-label>
+              <textarea matInput placeholder="" formControlName="hd_acerca" id="hd_acerca" required></textarea>
+              <mat-error *ngIf="myError('hd_acerca', 'required')">El dato requerido</mat-error>
+              <mat-error *ngIf="myError('hd_acerca', 'maxlength')">Demasiado largo</mat-error>
+        </mat-form-field>
+      <mat-card-actions>
+        <button  mat-raised-button color="primary" [disabled]="!myForm.valid">Actualizar</button>
+        <button  mat-raised-button color="primary"[mat-dialog-close]="myForm"> Cancelar</button>
+      </mat-card-actions>
+    </form>
+  </mat-card-content>

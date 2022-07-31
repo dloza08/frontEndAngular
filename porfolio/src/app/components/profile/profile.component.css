@@ -1,0 +1,51 @@
+  .perfil {
+    position: absolute;
+     top: 35px; 
+     width: auto;
+     height: auto;
+     left: 40px;
+   }
+
+@media(min-width:576px) {
+  #fotoperfil{
+    position: absolute;
+    width: 18%;
+  } 
+   #penrespon{
+     position: absolute;
+      left: calc(150px/2 - 5px);
+      top: calc(200px/2 - 5px);
+  }  
+
+
+  
+  }
+
+@media(max-width:575px) {
+  #fotoperfil{
+    position: absolute;
+    width: 18%;
+    
+    
+  }
+  #penrespon{
+    position: absolute;
+     left: calc(150px/2 - 5px);
+     top: calc(200px/2 - 5px);
+  }  
+
+}
+
+ .btn-pen-perfil{
+   position: absolute;
+   left: calc(140px - 10px);
+   top: calc(200px - 10px);
+   
+ }
+ .btn-banner{
+    position: absolute;
+    left: calc(1000px/2 - 40px);
+    top: calc(100px/2 - 10px);
+   
+ }
+
